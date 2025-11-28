@@ -26,7 +26,7 @@ CREATE TABLE Enrollments (
     course_id INT NOT NULL,
     score DECIMAL(4,2),
     enrollment_date DATE,
-    CONSTRAINT chk_score_range CHECK (score BETWEEN 0 AND 10),
+    CONSTRAINT score CHECK (score BETWEEN 0 AND 10),
 	FOREIGN KEY (student_id) REFERENCES Students(student_id) 
     FOREIGN KEY (course_id) REFERENCES Courses(course_id) 
 );
